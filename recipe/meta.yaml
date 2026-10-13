@@ -1,15 +1,15 @@
-{% set version = "17.3" %}
+{% set version = "18.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-fields
-  version: "{{ version|replace("-", "_") }}"
+  version: {{ version|replace("-", "_") }}
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/fields_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/fields/fields_{{ version }}.tar.gz
-  sha256: 1d3a9cd6e119ecbfe422ba788dca3b62bfb890d1af945f6bfff3cf2fcc29d9b3
+  sha256: d564cd5309c738cc5dba51ee12eceb7333f107f1739792b07f636202a6714f07
 
 build:
   number: 0
